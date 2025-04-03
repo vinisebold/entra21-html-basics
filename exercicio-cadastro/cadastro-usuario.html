@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: monospace;
+            color: rgb(11, 12, 23);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+
+        input,
+        select,
+        textarea {
+            text-align: center;
+            border-radius: 8px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            width: 70%;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .voltar {
+            align-self: flex-start;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .reset {
+            cursor:pointer;
+            color: #333;
+            padding: 5px 10px;
+            border: 0.043cm solid #ffffff;
+            background-color: #ffffff;
+            text-decoration:underline solid rgba(0, 0, 0, 0.275);
+        }
+
+        .enviar {
+            cursor: pointer;
+            
+            width: 150px;
+            color: #49a849;
+            padding: 5px 10px;
+            border: 0.05cm solid #49a849;
+            border-radius: 25px;
+            background-color: #ffffff;
+            transition-duration: 0.5s;
+        }
+
+        .enviar:hover{
+            color: #ffffff;
+            transform: translateY(+0.5px);
+            background-color: #6ac26a;
+        }
+
+        fieldset{
+            width: 550px;
+            border: 2px solid rgb(179, 179, 179);
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.163);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <a href="TODOS ATRIBUTOS.html" class="voltar">VOLTAR</a>
+
+    <h1>CADASTRO USUÁRIO</h1>
+
+    <form action="/HTML/TODOS ATRIBUTOS.html" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+        <div>
+            <label for="nome">Nome:</label><br>
+            <input type="text" name="nome" id="nome">
+        </div>
+
+        <div>
+            <label for="cpf">CPF:</label><br>
+            <input type="number" name="cpf" id="cpf">
+        </div>
+
+        <div>
+            <label for="nascimento">Data de Nascimento:</label><br>
+            <input type="date" name="nascimento" id="nascimento">
+        </div>
+
+        <div>
+            <label for="horario">Digite o Horário:</label><br>
+            <input type="time" name="horario" id="horario">
+        </div>
+
+        <div>
+            <label for="idade">Idade:</label><br>
+            <input type="number" name="idade" id="idade">
+        </div>
+
+        <div>
+            <label for="descricao">Descrição:</label><br>
+            <textarea name="descricao" id="descricao" cols="40" rows="10"></textarea>
+        </div>
+
+        <div>
+            <label for="estado">Estado:</label><br>
+            <select name="estado" id="estado">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SC">Santa Catarina</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Gênero:</label><br>
+            <input type="radio" name="genero" id="masculino" value="m">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="feminino" value="f">
+            <label for="feminino">Feminino</label>
+        </div>
+
+        <div>
+            <label>Interesses:</label><br>
+            <input type="checkbox" name="interesses[]" id="esporte" value="Esporte">
+            <label for="esporte">Esporte</label><br>
+            <input type="checkbox" name="interesses[]" id="musica" value="Música">
+            <label for="musica">Música</label><br>
+            <input type="checkbox" name="interesses[]" id="filmes" value="Filmes">
+            <label for="filmes">Filmes</label>
+        </div>
+
+        <div>
+            <label for="doc">Enviar Arquivo</label><br>
+            <input type="file" name="doc" id="doc" accept=".pdf,.txt,.docx,">
+        </div><br>
+
+        <div style="text-align: center;">
+            <button type="submit" class="enviar">Enviar</button><br>
+            <button type="reset" class="reset">Resetar Formulário</button>
+        </div>
+    </form>
+</fieldset>
+</body>
+
+</html>
